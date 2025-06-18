@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <>
     <section className='Header'>
-      <div className='flex flex-row px-4 sm:px-6 py-6 sm:py-8 gap-x-1 bg-slate-600 items-center'>
+      <div className='flex flex-row px-4 sm:px-6 py-5 sm:py-6 gap-x-1 bg-slate-600 items-center'>
         <img className='h-[20px] sm:h-[28px] object-cover' src={viteLogo} alt='vite logo'/>
         <h1 className='font-poppins font-bold text-white text-2xl sm:text-5xl'>Vite</h1>
         <h1 className='ml-0.5 mr-0.5 font-poppins font-bold text-white text-2xl sm:text-5xl'>+</h1>
