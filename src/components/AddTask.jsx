@@ -1,5 +1,4 @@
 export default function AddTask({ task, setTask, addTask }) {
-  // const { task, setTask, addTask, } = prop;
   return (
     <section className='CreateTask'>
       <form onSubmit={(e) => {addTask(task); e.preventDefault(); setTask('')}}>
