@@ -3,9 +3,9 @@ import { useState } from 'react';
 export default function TaskItems({ displayTasks, showActive, setShowActive, toggleCompleted, moveTaskUp, moveTaskDown, editedTask, openModalDialog }) {
   return (
     <div className='task-list flex flex-col'>
-      <div className='relative flex'>
-        <p className='flex items-center text-lg sm:text-xl mt-2 mb-1'>Task List</p>
-        <div className='absolute top-3.5 left-25 flex items-center absolute'>
+      <div className='relative flex mt-2 mb-1'>
+        <p className='text-base sm:text-lg'>Task List</p>
+        <div className='absolute top-3.5 left-25 flex items-center'>
           <input type='checkbox' checked={showActive} onChange={(e) => setShowActive(e.target.checked)} className='accent-sky-600'/>
           <span className='pl-1 text-sm sm:text-base text-gray-700'>Show only active</span>
         </div>
