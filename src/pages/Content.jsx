@@ -3,8 +3,8 @@ import TaskList from '../components/TaskList'
 export default function Content() {
   return (
     <section className='Content flex flex-1 items-stretch justify-center bg-gray-200'>
-      <div className="container m-0 sm:m-10 content-center">
-        <div className='flex flex-col max-w-[1024px] self-stretch mx-auto px-8 py-5 gap-y-4 text-gray-800 bg-white rounded-xl shadow-lg outline outline-gray-200/10'>
+      <div className="container max-w-full w-[93%] m-0 sm:m-10 content-center">
+        <div className='flex flex-col self-stretch mx-auto px-8 py-5 gap-y-4 text-gray-800 bg-white rounded-xl shadow-lg outline outline-gray-200/10'>
           <TaskList/>
         </div>
       </div>
