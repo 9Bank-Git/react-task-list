@@ -11,7 +11,7 @@ export default function TaskItems({ displayTasks, showActive, setShowActive, tog
         </div>
       </div>
       <hr className='text-slate-300 mb-3'/>
-      <ul className='tasks-content flex flex-col gap-y-2 min-h-[350px] sm:min-h-[400px]'>
+      <ul className='tasks-content flex flex-col gap-y-2 min-h-[380px] sm:min-h-[420px] bg-white'>
         {displayTasks.map((task, index) => (
           <ItemsList key={task.id} task={task} index={index} completedTask={toggleCompleted} moveTaskUp={moveTaskUp} moveTaskDown={moveTaskDown} editedTask={editedTask} openModalDialog={openModalDialog}/>
         ))}
