@@ -27,7 +27,6 @@
     min-width: 320px;
   }
   *, :after, :before, ::backdrop {
-    line-height: 1.4;
     box-sizing: inherit;
     font-family: inherit;
   }
