@@ -6,7 +6,7 @@ export default function AddTask({ task, setTask, addTask }) {
         <div className='flex flex-row text-base'>
           <input 
             type='text' 
-            className='w-full px-1 shadow-xs rounded-l-md border border-gray-400/80 outline-none text-gray-800 placeholder-gray-400'
+            className='w-full px-1 bg-white shadow-xs rounded-l-md border border-gray-400/80 outline-none text-gray-800 placeholder-gray-400'
             maxLength='60' 
             placeholder='Write something ...' 
             required 
