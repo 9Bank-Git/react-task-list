@@ -1,7 +1,6 @@
 import { useRef, useEffect } from 'react'
 
 export default function ModalDialog({ isShow, eventTarget, submitDialog, setShow }) {
-  // const { isShow, eventTarget, submitDialog, setShow } = prop;
   const dialogRef = useRef(null);
   const dialog = dialogRef.current
 
