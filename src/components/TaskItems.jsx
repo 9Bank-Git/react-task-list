@@ -5,7 +5,7 @@ export default function TaskItems({ displayTasks, showActive, setShowActive, tog
     <div className='task-list flex flex-col'>
       <div className='relative flex mt-2 mb-1'>
         <p className='text-base sm:text-lg'>Task List</p>
-        <div className='absolute top-3.5 left-25 flex items-center'>
+        <div className='absolute top-1.5 left-25 flex items-center'>
           <input type='checkbox' checked={showActive} onChange={(e) => setShowActive(e.target.checked)} className='accent-sky-600'/>
           <span className='pl-1 text-sm sm:text-base text-gray-700'>Show only active</span>
         </div>
