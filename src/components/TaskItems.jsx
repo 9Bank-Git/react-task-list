@@ -5,11 +5,11 @@ export default function TaskItems({ displayTasks, showActive, setShowActive, tog
   return (
     <div className='task-list flex flex-col'>
       <div className='relative flex mt-2 mb-1'>
-        <p className='text-base sm:text-lg'>Task List</p>
-        <div className='absolute top-1 left-25 flex items-center'>
+        <p className='text-base sm:text-lg'>Tasks List</p>
+        <label className='absolute top-1 left-25 flex items-center'>
           <input type='checkbox' checked={showActive} onChange={(e) => setShowActive(e.target.checked)} className='accent-sky-600'/>
           <span className='pl-1 text-sm sm:text-base text-gray-700'>Show only active</span>
-        </div>
+        </label>
       </div>
       <hr className='text-slate-300 mb-3'/>
       <ul className='tasks-content flex flex-col gap-y-2 min-h-[380px] sm:min-h-[420px]'>
@@ -59,25 +59,25 @@ function ItemsList({ task, index, completedTask, moveTaskUp, moveTaskDown, edite
       <div className='flex mr-1 space-x-1.5'>
         {isEditing ? (
           <>
-          <button onClick={() => moveTaskUp(index)} className='flex px-1.5 py-1 rounded text-gray-500 hover:bg-zinc-200 items-center'>
+          <button title='Move up' onClick={() => moveTaskUp(index)} className='flex px-1.5 py-1 rounded text-gray-500 hover:bg-zinc-200 items-center'>
             <i className='material-icons' style={{fontSize: '20px'}}>arrow_upward</i>
           </button>
-          <button onClick={() => moveTaskDown(index)} className='flex px-1.5 py-1 rounded text-gray-500 hover:bg-zinc-200 items-center'>
+          <button title='Move down' onClick={() => moveTaskDown(index)} className='flex px-1.5 py-1 rounded text-gray-500 hover:bg-zinc-200 items-center'>
             <i className='material-icons' style={{fontSize: '20px'}}>arrow_downward</i>
           </button>
-          <button onClick={() => handleSave(task.id)} className='flex px-1.5 py-1 rounded text-gray-500 hover:bg-zinc-200 items-center'>
+          <button title='Save' onClick={() => handleSave(task.id)} className='flex px-1.5 py-1 rounded text-gray-500 hover:bg-zinc-200 items-center'>
             <i className='material-icons' style={{fontSize: '20px'}}>save</i>
           </button>
-          <button onClick={() => setIsEditing(false)} className='flex px-1.5 py-1 rounded text-gray-500 hover:bg-zinc-200 items-center'>
+          <button title='Cancel' onClick={() => setIsEditing(false)} className='flex px-1.5 py-1 rounded text-gray-500 hover:bg-zinc-200 items-center'>
             <i className='material-icons' style={{fontSize: '20px'}}>close</i>
           </button>
           </>
         ) : (
           <>
-          <button onClick={() => handleEdit(index)} className='flex px-1.5 py-1 rounded text-gray-500 hover:bg-zinc-200 items-center'>
-            <i className='material-icons' style={{fontSize: '20px'}}>create</i>
+          <button title='Edit' onClick={() => handleEdit(index)} className='flex px-1.5 py-1 rounded text-gray-500 hover:bg-zinc-200 items-center'>
+            <i className='material-icons' style={{fontSize: '20px'}}>edit</i>
           </button>
-          <button onClick={() => openModalDialog(true, task.id)} className='flex px-1.5 py-1 rounded text-gray-500 hover:bg-zinc-200 items-center'>
+          <button title='Delete' onClick={() => openModalDialog(true, task.id)} className='flex px-1.5 py-1 rounded text-gray-500 hover:bg-zinc-200 items-center'>
             <i className='material-icons' style={{fontSize: '20px'}}>delete</i>
           </button>
           </>
