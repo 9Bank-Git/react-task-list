@@ -10,7 +10,7 @@ export default function PageLayout() {
     <Header/>
     <MainContent/>
     <Footer/>
-    <ToastContainer autoClose={2500} hideProgressBar/>
+    <ToastContainer autoClose={3500} hideProgressBar/>
     </>
   )
 }
