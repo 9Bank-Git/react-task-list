@@ -60,7 +60,7 @@ function ItemsList({ task, index, completedTask, moveTaskUp, moveTaskDown, edite
   return (
     <li className='flex flex-col sm:flex-row px-4 py-3 gap-y-2 sm:gap-x-2 rounded shadow bg-white items-center'>
       <input type='checkbox' checked={task.completed} onChange={() => completedTask(task.id)} className='size-4 ml-2 accent-gray-500/25 hover:opacity-60 items-center'/>
-      <span className={`flex ml-2 size-5 rounded-full font-semibold text-sm sm:text-base text-center content-center ${task.completed ? 'text-gray-100 bg-sky-200' : 'text-white bg-sky-500'}`}>
+      <span className={`ml-2 size-5 rounded-full font-semibold text-sm sm:text-base text-center content-center ${task.completed ? 'text-gray-100 bg-sky-200' : 'text-white bg-sky-500'}`}>
         {index + 1}
       </span>
       <div className='flex flex-1 font-light text-base sm:text-lg text-center sm:text-left break-all'>
