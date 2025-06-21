@@ -34,7 +34,7 @@ function ItemsList({ task, index, completedTask, moveTaskUp, moveTaskDown, edite
   const handleSave = (taskId) => {
     if (editText.trim() === '') {
       toast.warning('Please, write something in the field to save changes');
-      return handleEdit();
+      return
     } else {
     editedTask(taskId, editText);
     setIsEditing(false);
@@ -51,7 +51,7 @@ function ItemsList({ task, index, completedTask, moveTaskUp, moveTaskDown, edite
       </div>
       <div className='flex flex-1 font-light text-base sm:text-lg text-center sm:text-left break-all'>
         {isEditing ? (
-          <input type='text' value={editText} onChange={(e) => setEditText(e.target.value)} className='grow rounded border border-gray-400 focus:outline-none'/>
+          <input type='text' value={editText} onChange={(e) => setEditText(e.target.value)} className='grow rounded border border-gray-400 focus:outline-none' required autoFocus/>
         ) : (
           <span className={`${task.completed ? 'line-through text-gray-400' : 'text-gray-700'}`}>{task.text}</span>
         )}
