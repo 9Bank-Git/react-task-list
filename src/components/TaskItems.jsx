@@ -58,6 +58,7 @@ function ItemsList({ task, index, completedTask, moveTaskUp, moveTaskDown, edite
       </div>
       <div className='flex mr-1 space-x-1.5'>
         {isEditing ? (
+          <>
           <button onClick={() => moveTaskUp(index)} className='flex px-1.5 py-1 rounded text-gray-500 hover:bg-zinc-200 items-center'>
             <i className='material-icons' style={{fontSize: '20px'}}>arrow_upward</i>
           </button>
@@ -70,13 +71,16 @@ function ItemsList({ task, index, completedTask, moveTaskUp, moveTaskDown, edite
           <button onClick={() => setIsEditing(false)} className='flex px-1.5 py-1 rounded text-gray-500 hover:bg-zinc-200 items-center'>
             <i className='material-icons' style={{fontSize: '20px'}}>close</i>
           </button>
+          </>
         ) : (
+          <>
           <button onClick={() => handleEdit(index)} className='flex px-1.5 py-1 rounded text-gray-500 hover:bg-zinc-200 items-center'>
             <i className='material-icons' style={{fontSize: '20px'}}>create</i>
           </button>
           <button onClick={() => openModalDialog(true, task.id)} className='flex px-1.5 py-1 rounded text-gray-500 hover:bg-zinc-200 items-center'>
             <i className='material-icons' style={{fontSize: '20px'}}>delete</i>
           </button>
+          </>
         )}
       </div>
     </li>
