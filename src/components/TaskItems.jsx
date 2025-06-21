@@ -60,9 +60,9 @@ function ItemsList({ task, index, completedTask, moveTaskUp, moveTaskDown, edite
   return (
     <li className='flex flex-col sm:flex-row px-4 py-3 gap-y-2 sm:gap-x-2 rounded shadow bg-white items-center'>
       <input type='checkbox' checked={task.completed} onChange={() => completedTask(task.id)} className='size-4 ml-2 accent-gray-500/25 hover:opacity-60 items-center'/>
-      <div className={`flex ml-2 size-5 rounded-full font-semibold text-sm sm:text-base text-center content-center ${task.completed ? 'text-gray-100 bg-sky-200' : 'text-white bg-sky-500'}`}>
-        <span>{index + 1}</span>
-      </div>
+      <span className={`flex ml-2 size-5 rounded-full font-semibold text-sm sm:text-base text-center content-center ${task.completed ? 'text-gray-100 bg-sky-200' : 'text-white bg-sky-500'}`}>
+        {index + 1}
+      </span>
       <div className='flex flex-1 font-light text-base sm:text-lg text-center sm:text-left break-all'>
         {isEditing ? (
           <input type='text' value={editText} onChange={(e) => setEditText(e.target.value)} className='grow rounded border border-gray-400 focus:outline-none invalid:border-pink-500' required/>
@@ -73,10 +73,10 @@ function ItemsList({ task, index, completedTask, moveTaskUp, moveTaskDown, edite
       <div className='flex mr-1 space-x-1'>
         {isEditing ? (
           <>
-          <button type='button' title='Move up' onClick={() => moveTaskUp(index)} className='flex px-1.5 py-1 rounded text-gray-500 hover:bg-zinc-200 items-center'>
+          <button type='button' title='Move up' onClick={() => moveTaskUp(index)} className='flex px-1 py-1 rounded text-gray-500 hover:bg-zinc-200 items-center'>
             <i className='material-icons' style={{fontSize: '20px'}}>arrow_upward</i>
           </button>
-          <button type='button' title='Move down' onClick={() => moveTaskDown(index)} className='flex px-1.5 py-1 rounded text-gray-500 hover:bg-zinc-200 items-center'>
+          <button type='button' title='Move down' onClick={() => moveTaskDown(index)} className='flex px-1 py-1 rounded text-gray-500 hover:bg-zinc-200 items-center'>
             <i className='material-icons' style={{fontSize: '20px'}}>arrow_downward</i>
           </button>
           <button type='button' title='Save' onClick={() => handleSave(task.id)} className='flex px-1.5 py-1 rounded text-gray-500 hover:bg-zinc-200 items-center'>
