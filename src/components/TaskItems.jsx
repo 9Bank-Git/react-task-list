@@ -49,9 +49,9 @@ function ItemsList({ task, index, completedTask, moveTaskUp, moveTaskDown, edite
           {index + 1}
         </span>
       </div>
-      <div className='grow font-light text-base sm:text-lg text-center sm:text-left break-all'>
+      <div className='flex flex-1 font-light text-base sm:text-lg text-center sm:text-left break-all'>
         {isEditing ? (
-          <input type='text' value={editText} onChange={(e) => setEditText(e.target.value)} className='rounded border border-gray-400 focus:outline-none'/>
+          <input type='text' value={editText} onChange={(e) => setEditText(e.target.value)} className='grow rounded border border-gray-400 focus:outline-none'/>
         ) : (
           <span className={`${task.completed ? 'line-through text-gray-400' : 'text-gray-700'}`}>{task.text}</span>
         )}
