@@ -4,7 +4,7 @@ import { toast } from 'react-toastify'
 export default function TaskItems({ displayTasks, showActive, setShowActive, toggleCompleted, moveTaskUp, moveTaskDown, editedTask, openModalDialog }) {
   return (
     <section className='TaskList'>
-      <div className='flex flex-col'>
+      <div className='flex flex-col flex-1'>
         <div className='relative flex mt-2 mb-1'>
           <p className='text-base sm:text-lg'>Tasks List</p>
           <label className='absolute top-1 left-25 sm:left-30 flex items-center'>
