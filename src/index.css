@@ -20,12 +20,6 @@
 }
 
 @layer base {
-  #root {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    min-width: 320px;
-  }
   *, :after, :before, ::backdrop {
     box-sizing: inherit;
     font-family: inherit;
@@ -48,5 +42,22 @@
     color: inherit;
     -webkit-text-decoration: inherit;
     text-decoration: inherit;
+  }
+  #root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-width: 320px;
+  }
+  .Header {
+    display: flex;
+    align-items: center;
+  }
+  .MainContent {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    justify-content: center;
+    align-items: center;
   }
 }
