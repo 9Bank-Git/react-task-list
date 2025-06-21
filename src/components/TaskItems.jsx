@@ -49,7 +49,7 @@ function ItemsList({ task, index, completedTask, moveTaskUp, moveTaskDown, edite
           {index + 1}
         </span>
       </div>
-      <div className='flex-1 font-light text-base sm:text-lg text-center sm:text-left break-all'>
+      <div className='grow font-light text-base sm:text-lg text-center sm:text-left break-all'>
         {isEditing ? (
           <input type='text' value={editText} onChange={(e) => setEditText(e.target.value)} className='rounded border border-gray-400 focus:outline-none'/>
         ) : (
